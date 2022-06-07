@@ -135,16 +135,15 @@ export default {
       description: project.description,
       lang: project.lang,
       theme_color: project.themeColor,
-      icon: `/soccer1-bielefeld/pwaIcon.png`
-      // icons:[{
-      //   src:`/soccer1-bielefeld/pwaIcon.png`,
-      //   size:"144x144",
-      //   type:"image/png"
-      // },{
-      //   src:`/soccer1-bielefeld/pwaIcon.png`,
-      //   size:"180x180",
-      //   type:"image/png"
-      // }]
+      icons:[{
+        src:`/soccer1-bielefeld/pwaIcon.png`,
+        size:"144x144",
+        type:"image/png"
+      },{
+        src:`/soccer1-bielefeld/pwaIcon.png`,
+        size:"180x180",
+        type:"image/png"
+      }]
     },
   },
 
