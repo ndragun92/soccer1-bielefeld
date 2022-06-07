@@ -5,6 +5,7 @@ const project = {
   // Nuxt Config
   lang: 'en',
   favicon: 'favicon.ico', // 228x228
+  pwaIcon: 'icon.png', // 228x228
   socialShareImage: 'favicon.ico',
   ogImage: 'https://ndragun92.github.io/soccer1-bielefeld/images/soccer1-logo.png',
   twitterImage: 'https://ndragun92.github.io/soccer1-bielefeld/images/soccer1-logo.png',

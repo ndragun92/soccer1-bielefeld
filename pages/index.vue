@@ -43,8 +43,8 @@
                   <div class="flex items-center gap-4">
                     <img
                       class="w-10 h-10"
-                      :src="`~static/images/player/${teamOnePlayer.id}.png`"
-                      alt=""
+                      :src="require(`@/static/images/player/${teamOnePlayer.id}.png`)"
+                      :alt="teamOnePlayer.name"
                     />
                     {{teamOnePlayer.name}}
                   </div>
@@ -61,8 +61,8 @@
                   <div class="flex items-center gap-4">
                     <img
                       class="w-10 h-10"
-                      :src="`~static/images/player/${teamTwoPlayer.id}.png`"
-                      alt=""
+                      :src="require(`@/static/images/player/${teamTwoPlayer.id}.png`)"
+                      :alt="teamTwoPlayer.name"
                     />
                     {{teamTwoPlayer.name}}
                   </div>
@@ -79,8 +79,8 @@
                   <div class="flex items-center gap-4">
                     <img
                       class="w-10 h-10"
-                      :src="`~static/images/player/${teamThreePlayer.id}.png`"
-                      alt=""
+                      :src="require(`@/static/images/player/${teamThreePlayer.id}.png`)"
+                      :alt="teamThreePlayer.name"
                     />
                     {{teamThreePlayer.name}}
                   </div>
@@ -103,8 +103,8 @@
                 <div class="flex items-center gap-4">
                   <img
                     class="w-10 h-10"
-                    :src="`~static/images/player/${player.id}.png`"
-                    alt=""
+                    :src="require(`@/static/images/player/${player.id}.png`)"
+                    :alt="player.name"
                   />
                   {{player.name}}
                 </div>

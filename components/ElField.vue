@@ -1,6 +1,6 @@
 <template>
   <div class="w-full h-full">
-    <img class="w-96 m-auto" src="~static/images/football_field.svg" alt="" />
+    <img class="w-96 m-auto" src="~static/images/football_field.svg" alt="Soccer field" />
     <div class="absolute top-[1.1rem] w-full">
       <div
         class="bg-black bg-opacity-25 text-white w-[21.7rem] h-[16.95rem] m-auto"
@@ -124,7 +124,7 @@
                 <img
                   class="w-10 h-10"
                   :src="require(`@/static/images/player/${topTeamPlayer.id}.png`)"
-                  alt=""
+                  :alt="topTeamPlayer.name"
                 />
                 <div
                   class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
@@ -151,7 +151,7 @@
                 <img
                   class="w-10 h-10"
                   :src="require(`@/static/images/player/${topTeamPlayer.id}.png`)"
-                  alt=""
+                  :alt="topTeamPlayer.name"
                 />
                 <div
                   class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
@@ -178,7 +178,7 @@
                 <img
                   class="w-10 h-10"
                   :src="require(`@/static/images/player/${topTeamPlayer.id}.png`)"
-                  alt=""
+                  :alt="topTeamPlayer.name"
                 />
                 <div
                   class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
@@ -205,7 +205,7 @@
                 <img
                   class="w-10 h-10"
                   :src="require(`@/static/images/player/${topTeamPlayer.id}.png`)"
-                  alt=""
+                  :alt="topTeamPlayer.name"
                 />
                 <div
                   class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
@@ -232,7 +232,7 @@
                 <img
                   class="w-10 h-10"
                   :src="require(`@/static/images/player/${topTeamPlayer.id}.png`)"
-                  alt=""
+                  :alt="topTeamPlayer.name"
                 />
                 <div
                   class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
@@ -280,7 +280,7 @@
                 <img
                   class="w-10 h-10"
                   :src="require(`@/static/images/player/${bottomTeamPlayer.id}.png`)"
-                  alt=""
+                  :alt="bottomTeamPlayer.name"
                 />
                 <div
                   class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
@@ -307,7 +307,7 @@
                 <img
                   class="w-10 h-10"
                   :src="require(`@/static/images/player/${bottomTeamPlayer.id}.png`)"
-                  alt=""
+                  :alt="bottomTeamPlayer.name"
                 />
                 <div
                   class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
@@ -334,7 +334,7 @@
                 <img
                   class="w-10 h-10"
                   :src="require(`@/static/images/player/${bottomTeamPlayer.id}.png`)"
-                  alt=""
+                  :alt="bottomTeamPlayer.name"
                 />
                 <div
                   class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
@@ -361,7 +361,7 @@
                 <img
                   class="w-10 h-10"
                   :src="require(`@/static/images/player/${bottomTeamPlayer.id}.png`)"
-                  alt=""
+                  :alt="bottomTeamPlayer.name"
                 />
                 <div
                   class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
@@ -388,7 +388,7 @@
                 <img
                   class="w-10 h-10"
                   :src="require(`@/static/images/player/${bottomTeamPlayer.id}.png`)"
-                  alt=""
+                  :alt="bottomTeamPlayer.name"
                 />
                 <div
                   class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"

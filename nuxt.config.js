@@ -127,6 +127,9 @@ export default {
       lang: project.lang,
       theme_color: project.themeColor,
     },
+    icon: {
+      source: project.pwaIcon
+    }
   },
 
   tailwindcss: {
