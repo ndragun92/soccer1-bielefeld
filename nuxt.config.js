@@ -137,7 +137,7 @@ export default {
       theme_color: project.themeColor,
     },
     icon: {
-      source: project.pwaIcon
+      source: project.pwaIcon,
     }
   },
 
