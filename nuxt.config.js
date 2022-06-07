@@ -1,15 +1,11 @@
 import { project } from './config/project'
 
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/soccer1-bielefeld/'
-  }
-} : {}
-
 // Env vars
 const apiUrl = process.env.apiUrl || 'http://localhost:3333'
 export default {
-  ...routerBase,
+  router: {
+    base: '/soccer1-bielefeld/'
+  },
   env: {
     apiUrl,
   },
