@@ -1,6 +1,20 @@
 <template>
   <div class="bg-[#00a000] min-h-screen">
-    <el-field :team-one="teamOne" :team-two="teamTwo" :team-three="teamThree" />
+    <el-field v-if="!generatingTeams" :team-one="teamOne" :team-two="teamTwo" :team-three="teamThree" />
+    <div v-else class="w-full h-full">
+      <img
+        class="w-96 m-auto"
+        src="~static/images/football_field.svg"
+        alt="Soccer field"
+      />
+      <div class="absolute top-[1.1rem] w-full">
+        <div
+          class="bg-black bg-opacity-25 text-white w-[21.7rem] h-[34.1rem] m-auto flex items-center justify-center"
+        >
+          <div class="bg-black py-2 px-4 rounded">Generiranje tima...</div>
+        </div>
+      </div>
+    </div>
     <div class="text-center">
       <button
               type="button"
@@ -132,6 +146,7 @@ export default Vue.extend({
   data: () => ({
     players: [] as PlayerInterface[],
     showPlayers: false,
+    generatingTeams: true,
     teamOne: [] as {id: number, name: string, active: boolean, won: number, lost: number}[],
     teamTwo: [] as {id: number, name: string, active: boolean, won: number, lost: number}[],
     teamThree: [] as {id: number, name: string, active: boolean, won: number, lost: number}[],
@@ -164,12 +179,19 @@ export default Vue.extend({
     if(localStorage.getItem('teamThree')) {
       this.teamThree = JSON.parse(localStorage.getItem('teamThree') as string)
     }
+    setTimeout(() => {
+      this.generatingTeams = false
+      if(!this.teamOne.length) {
+        this.onGenerateTeam()
+      }
+    }, 1000)
   },
   methods: {
     randomIntFromInterval(min: number, max: number) { // min and max included
       return Math.floor(Math.random() * (max - min + 1) + min)
     },
     onGenerateTeam() {
+      this.generatingTeams = true
       this.teamOne = []
       this.teamTwo = []
       this.teamThree = []
@@ -224,6 +246,9 @@ export default Vue.extend({
       localStorage.setItem('teamOne', JSON.stringify(this.teamOne))
       localStorage.setItem('teamTwo', JSON.stringify(this.teamTwo))
       localStorage.setItem('teamThree', JSON.stringify(this.teamThree))
+      setTimeout(() => {
+        this.generatingTeams = false
+      }, 1000)
     },
     async onSetPlayerActiveState(player: PlayerInterface) {
       try {

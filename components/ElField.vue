@@ -567,27 +567,6 @@ export default {
     bottomTeamSelectShow: false,
   }),
   watch: {
-    teamOne: {
-      handler() {
-        this.initialTeams()
-      },
-      deep: true,
-      immediate: true,
-    },
-    teamTwo: {
-      handler() {
-        this.initialTeams()
-      },
-      deep: true,
-      immediate: true,
-    },
-    teamThree: {
-      handler() {
-        this.initialTeams()
-      },
-      deep: true,
-      immediate: true,
-    },
     topTeamSelected: {
       handler(val) {
         this.selectTopTeam(val)
@@ -599,8 +578,12 @@ export default {
       },
     },
   },
+  mounted() {
+    this.initialTeams()
+  },
   methods: {
     initialTeams() {
+      console.log('this.initialTeams()');
       if (this.teamOne.length) {
         this.topTeam = cloneDeep(this.teamOne.slice(0, 5))
         this.topTeamSelected = 1
