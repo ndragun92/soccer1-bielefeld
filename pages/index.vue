@@ -8,7 +8,7 @@
               @click="onGenerateTeam()">Generiraj timove</button>
     </div>
     <div class="mt-4 text-center my-2 bg-black pt-6">
-      <img class="w-20 m-auto" src="/images/soccer1-logo.png" alt="">
+      <img class="w-20 m-auto" :src="require('../static/images/soccer1-logo.png')" alt="">
       <p class="mt-4 text-sm text-white">
         Schelpmilser Weg 11, 33609 Bielefeld
       </p>
