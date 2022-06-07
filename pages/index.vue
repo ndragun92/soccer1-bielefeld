@@ -155,9 +155,7 @@ export default Vue.extend({
     }
   },
   mounted() {
-    console.log('DEBUG', localStorage.getItem('teamOne'));
     if(localStorage.getItem('teamOne')) {
-      console.log('DEBUG 2', JSON.parse(localStorage.getItem('teamOne') as string));
       this.teamOne = JSON.parse(localStorage.getItem('teamOne') as string)
     }
     if(localStorage.getItem('teamTwo')) {
@@ -166,7 +164,6 @@ export default Vue.extend({
     if(localStorage.getItem('teamThree')) {
       this.teamThree = JSON.parse(localStorage.getItem('teamThree') as string)
     }
-    console.log('DEBUG 3', this.teamOne);
   },
   methods: {
     randomIntFromInterval(min: number, max: number) { // min and max included

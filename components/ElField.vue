@@ -1,6 +1,10 @@
 <template>
   <div class="w-full h-full">
-    <img class="w-96 m-auto" src="~static/images/football_field.svg" alt="Soccer field" />
+    <img
+      class="w-96 m-auto"
+      src="~static/images/football_field.svg"
+      alt="Soccer field"
+    />
     <div class="absolute top-[1.1rem] w-full">
       <div
         class="bg-black bg-opacity-25 text-white w-[21.7rem] h-[16.95rem] m-auto"
@@ -123,7 +127,9 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="require(`@/static/images/player/${topTeamPlayer.id}.png`)"
+                  :src="
+                    require(`@/static/images/player/${topTeamPlayer.id}.png`)
+                  "
                   :alt="topTeamPlayer.name"
                 />
                 <div
@@ -150,7 +156,9 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="require(`@/static/images/player/${topTeamPlayer.id}.png`)"
+                  :src="
+                    require(`@/static/images/player/${topTeamPlayer.id}.png`)
+                  "
                   :alt="topTeamPlayer.name"
                 />
                 <div
@@ -177,7 +185,9 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="require(`@/static/images/player/${topTeamPlayer.id}.png`)"
+                  :src="
+                    require(`@/static/images/player/${topTeamPlayer.id}.png`)
+                  "
                   :alt="topTeamPlayer.name"
                 />
                 <div
@@ -204,7 +214,9 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="require(`@/static/images/player/${topTeamPlayer.id}.png`)"
+                  :src="
+                    require(`@/static/images/player/${topTeamPlayer.id}.png`)
+                  "
                   :alt="topTeamPlayer.name"
                 />
                 <div
@@ -231,7 +243,9 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="require(`@/static/images/player/${topTeamPlayer.id}.png`)"
+                  :src="
+                    require(`@/static/images/player/${topTeamPlayer.id}.png`)
+                  "
                   :alt="topTeamPlayer.name"
                 />
                 <div
@@ -279,7 +293,9 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="require(`@/static/images/player/${bottomTeamPlayer.id}.png`)"
+                  :src="
+                    require(`@/static/images/player/${bottomTeamPlayer.id}.png`)
+                  "
                   :alt="bottomTeamPlayer.name"
                 />
                 <div
@@ -306,7 +322,9 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="require(`@/static/images/player/${bottomTeamPlayer.id}.png`)"
+                  :src="
+                    require(`@/static/images/player/${bottomTeamPlayer.id}.png`)
+                  "
                   :alt="bottomTeamPlayer.name"
                 />
                 <div
@@ -333,7 +351,9 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="require(`@/static/images/player/${bottomTeamPlayer.id}.png`)"
+                  :src="
+                    require(`@/static/images/player/${bottomTeamPlayer.id}.png`)
+                  "
                   :alt="bottomTeamPlayer.name"
                 />
                 <div
@@ -360,7 +380,9 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="require(`@/static/images/player/${bottomTeamPlayer.id}.png`)"
+                  :src="
+                    require(`@/static/images/player/${bottomTeamPlayer.id}.png`)
+                  "
                   :alt="bottomTeamPlayer.name"
                 />
                 <div
@@ -387,7 +409,9 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="require(`@/static/images/player/${bottomTeamPlayer.id}.png`)"
+                  :src="
+                    require(`@/static/images/player/${bottomTeamPlayer.id}.png`)
+                  "
                   :alt="bottomTeamPlayer.name"
                 />
                 <div
@@ -548,18 +572,21 @@ export default {
         this.initialTeams()
       },
       deep: true,
+      immediate: true,
     },
     teamTwo: {
       handler() {
         this.initialTeams()
       },
       deep: true,
+      immediate: true,
     },
     teamThree: {
       handler() {
         this.initialTeams()
       },
       deep: true,
+      immediate: true,
     },
     topTeamSelected: {
       handler(val) {
@@ -574,10 +601,14 @@ export default {
   },
   methods: {
     initialTeams() {
-      this.topTeam = cloneDeep(this.teamOne.slice(0, 5))
-      this.topTeamSelected = 1
-      this.bottomTeam = cloneDeep(this.teamTwo.slice(0, 5))
-      this.bottomTeamSelected = 2
+      if (this.teamOne.length) {
+        this.topTeam = cloneDeep(this.teamOne.slice(0, 5))
+        this.topTeamSelected = 1
+      }
+      if (this.teamTwo.length) {
+        this.bottomTeam = cloneDeep(this.teamTwo.slice(0, 5))
+        this.bottomTeamSelected = 2
+      }
     },
     selectTopTeam(val) {
       switch (val) {
