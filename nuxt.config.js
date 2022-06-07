@@ -19,6 +19,11 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
+        hid: 'title',
+        name: 'title',
+        content: project.name,
+      },
+      {
         hid: 'description',
         name: 'description',
         content: project.description,
