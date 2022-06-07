@@ -120,6 +120,10 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    meta: {
+      title: project.name,
+      author: 'Nemanja Dragun',
+    },
     manifest: {
       title: project.name,
       name: project.name,
