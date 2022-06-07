@@ -8,7 +8,7 @@
               @click="onGenerateTeam()">Generiraj timove</button>
     </div>
     <div class="mt-4 text-center my-2 bg-black pt-6">
-      <img class="w-20 m-auto" :src="require('../static/images/soccer1-logo.png')" alt="">
+      <img class="w-20 m-auto" src="~static/images/soccer1-logo.png" alt="">
       <p class="mt-4 text-sm text-white">
         Schelpmilser Weg 11, 33609 Bielefeld
       </p>
@@ -43,7 +43,7 @@
                   <div class="flex items-center gap-4">
                     <img
                       class="w-10 h-10"
-                      :src="`/images/player/${teamOnePlayer.id}.png`"
+                      :src="`~static/images/player/${teamOnePlayer.id}.png`"
                       alt=""
                     />
                     {{teamOnePlayer.name}}
@@ -61,7 +61,7 @@
                   <div class="flex items-center gap-4">
                     <img
                       class="w-10 h-10"
-                      :src="`/images/player/${teamTwoPlayer.id}.png`"
+                      :src="`~static/images/player/${teamTwoPlayer.id}.png`"
                       alt=""
                     />
                     {{teamTwoPlayer.name}}
@@ -79,7 +79,7 @@
                   <div class="flex items-center gap-4">
                     <img
                       class="w-10 h-10"
-                      :src="`/images/player/${teamThreePlayer.id}.png`"
+                      :src="`~static/images/player/${teamThreePlayer.id}.png`"
                       alt=""
                     />
                     {{teamThreePlayer.name}}
@@ -103,7 +103,7 @@
                 <div class="flex items-center gap-4">
                   <img
                     class="w-10 h-10"
-                    :src="`/images/player/${player.id}.png`"
+                    :src="`~static/images/player/${player.id}.png`"
                     alt=""
                   />
                   {{player.name}}

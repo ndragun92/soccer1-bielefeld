@@ -1,17 +1,20 @@
 import { project } from './config/project'
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/soccer1-bielefeld/'
+  }
+} : {}
+
 // Env vars
 const apiUrl = process.env.apiUrl || 'http://localhost:3333'
 export default {
+  ...routerBase,
   env: {
     apiUrl,
   },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
-  router: {
-    base: '/soccer1-bielefeld/'
-  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
