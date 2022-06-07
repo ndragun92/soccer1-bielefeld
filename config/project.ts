@@ -6,8 +6,8 @@ const project = {
   lang: 'en',
   favicon: 'favicon.ico', // 228x228
   socialShareImage: 'favicon.ico',
-  ogImage: 'https://ndragun92.github.io/soccer1-bielefeld/images/og-image.png',
-  twitterImage: 'https://ndragun92.github.io/soccer1-bielefeld/images/twitter-image.png',
+  ogImage: 'https://ndragun92.github.io/soccer1-bielefeld/images/soccer1-logo.png',
+  twitterImage: 'https://ndragun92.github.io/soccer1-bielefeld/images/soccer1-logo.png',
   themeColor: '#000000',
 }
 

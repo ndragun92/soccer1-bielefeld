@@ -1,6 +1,5 @@
 <template>
   <div class="bg-[#00a000] min-h-screen">
-    <!--ver: 1-->
     <el-field :team-one="teamOne" :team-two="teamTwo" :team-three="teamThree" />
     <div class="text-center">
       <button
@@ -11,7 +10,7 @@
     <div class="mt-4 text-center my-2 bg-black pt-6">
       <img class="w-20 m-auto" src="~static/images/soccer1-logo.png" alt="">
       <p class="mt-4 text-sm text-white">
-        Schelpmilser Weg 11, 33609 Bielefeld (test)
+        Schelpmilser Weg 11, 33609 Bielefeld
       </p>
       <div class="mt-6">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9816.753055597379!2d8.6039907!3d52.039884!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xacfbe39223df076a!2sSoccer%201!5e0!3m2!1sen!2sde!4v1654606055530!5m2!1sen!2sde" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

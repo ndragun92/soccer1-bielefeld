@@ -150,7 +150,7 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="`~static//player/${topTeamPlayer.id}.png`"
+                  :src="require(`@/static/images/player/${topTeamPlayer.id}.png`)"
                   alt=""
                 />
                 <div
@@ -177,7 +177,7 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="`~static/images/player/${topTeamPlayer.id}.png`"
+                  :src="require(`@/static/images/player/${topTeamPlayer.id}.png`)"
                   alt=""
                 />
                 <div
@@ -204,7 +204,7 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="`~static/images/player/${topTeamPlayer.id}.png`"
+                  :src="require(`@/static/images/player/${topTeamPlayer.id}.png`)"
                   alt=""
                 />
                 <div
@@ -231,7 +231,7 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="`~static/images/player/${topTeamPlayer.id}.png`"
+                  :src="require(`@/static/images/player/${topTeamPlayer.id}.png`)"
                   alt=""
                 />
                 <div
@@ -279,7 +279,7 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="`~static/images/player/${bottomTeamPlayer.id}.png`"
+                  :src="require(`@/static/images/player/${bottomTeamPlayer.id}.png`)"
                   alt=""
                 />
                 <div
@@ -306,7 +306,7 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="`~static/images/player/${bottomTeamPlayer.id}.png`"
+                  :src="require(`@/static/images/player/${bottomTeamPlayer.id}.png`)"
                   alt=""
                 />
                 <div
@@ -333,7 +333,7 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="`~static/images/player/${bottomTeamPlayer.id}.png`"
+                  :src="require(`@/static/images/player/${bottomTeamPlayer.id}.png`)"
                   alt=""
                 />
                 <div
@@ -360,7 +360,7 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="`~static/images/player/${bottomTeamPlayer.id}.png`"
+                  :src="require(`@/static/images/player/${bottomTeamPlayer.id}.png`)"
                   alt=""
                 />
                 <div
@@ -387,7 +387,7 @@
               <div class="relative">
                 <img
                   class="w-10 h-10"
-                  :src="`~static/images/player/${bottomTeamPlayer.id}.png`"
+                  :src="require(`@/static/images/player/${bottomTeamPlayer.id}.png`)"
                   alt=""
                 />
                 <div
