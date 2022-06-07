@@ -135,9 +135,6 @@ export default {
       description: project.description,
       lang: project.lang,
       theme_color: project.themeColor,
-    },
-    icon: {
-      source: project.pwaIcon,
     }
   },
 
