@@ -116,18 +116,6 @@
           </div>
         </div>
       </transition>
-<!--      <hr>-->
-<!--      <pre>{{teamOne.length}}</pre>-->
-<!--      <hr>-->
-<!--      <pre>{{teamTwo.length}}</pre>-->
-<!--      <hr>-->
-<!--      <pre>{{teamThree.length}}</pre>-->
-<!--      <hr>-->
-<!--      <pre>{{teamOne}}</pre>-->
-<!--      <hr>-->
-<!--      <pre>{{teamTwo}}</pre>-->
-<!--      <hr>-->
-<!--      <pre>{{teamThree}}</pre>-->
     </div>
   </div>
 </template>
