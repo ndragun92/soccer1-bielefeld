@@ -4,7 +4,7 @@ import { project } from './config/project'
 const apiUrl = process.env.apiUrl || 'http://localhost:3333'
 export default {
   router: {
-    base: '/soccer1-bielefeld/'
+    base: '/soccer1-bielefeld/',
   },
   env: {
     apiUrl,
@@ -92,9 +92,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    { src: '@/plugins/axios' },
-  ],
+  plugins: [{ src: '@/plugins/axios' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -135,15 +133,18 @@ export default {
       description: project.description,
       lang: project.lang,
       theme_color: project.themeColor,
-      icons:[{
-        src:`/soccer1-bielefeld/pwaIcon.png`,
-        size:"144x144",
-        type:"image/png"
-      },{
-        src:`/soccer1-bielefeld/pwaIcon.png`,
-        size:"180x180",
-        type:"image/png"
-      }]
+      icons: [
+        {
+          src: `pwaIcon.png`,
+          size: '144x144',
+          type: 'image/png',
+        },
+        {
+          src: `/soccer1-bielefeld/pwaIcon.png`,
+          size: '512x512',
+          type: 'image/png',
+        },
+      ],
     },
   },
 
@@ -151,9 +152,7 @@ export default {
     jit: true,
     // add '~tailwind.config` alias
     exposeConfig: true,
-    plugins: [
-      require('@tailwindcss/forms')
-    ]
+    plugins: [require('@tailwindcss/forms')],
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
