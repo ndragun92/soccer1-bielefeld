@@ -109,7 +109,7 @@
                   {{player.name}}
                 </div>
                 <div>
-                  <button type="button" class="w-4 h-4 rounded-full" :class="[player.active ? 'bg-green-500' : 'bg-red-500']" @click="player.active = !player.active" />
+                  <button type="button" class="w-4 h-4 rounded-full" :class="[player.active ? 'bg-green-500' : 'bg-red-500']" @click="onSetPlayerActiveState(player)" />
                 </div>
               </li>
             </ul>
@@ -124,39 +124,31 @@
 import Vue from 'vue'
 import shuffle from 'lodash/shuffle'
 
+interface PlayerInterface { id: number, name: string, active: boolean, won: number, lost: number }
+
 export default Vue.extend({
   name: 'IndexPage',
   data: () => ({
-    players: [
-      {id: 1, name: 'Mario', active: true, won: 0, lost: 0},
-      {id: 2, name: 'Misko', active: true, won: 0, lost: 0},
-      {id: 3, name: 'Dusko', active: true, won: 0, lost: 0},
-      {id: 4, name: 'Nemanja', active: true, won: 0, lost: 0},
-      {id: 5, name: 'Andrej', active: true, won: 0, lost: 0},
-      {id: 6, name: 'Beco', active: true, won: 0, lost: 0},
-      {id: 7, name: 'Niđo', active: true, won: 0, lost: 0},
-      {id: 8, name: 'Kico', active: true, won: 0, lost: 0},
-      {id: 9, name: 'Martin', active: true, won: 0, lost: 0},
-      {id: 10, name: 'Teo', active: true, won: 0, lost: 0},
-      {id: 11, name: 'Nikola R.', active: true, won: 0, lost: 0},
-      {id: 12, name: 'Nikola V.', active: true, won: 0, lost: 0},
-      {id: 13, name: 'Jozo', active: true, won: 0, lost: 0},
-      {id: 14, name: 'Davor', active: true, won: 0, lost: 0},
-      {id: 15, name: 'Danco', active: false, won: 0, lost: 0},
-    ],
+    players: [] as PlayerInterface[],
     showPlayers: false,
     teamOne: [] as {id: number, name: string, active: boolean, won: number, lost: number}[],
     teamTwo: [] as {id: number, name: string, active: boolean, won: number, lost: number}[],
     teamThree: [] as {id: number, name: string, active: boolean, won: number, lost: number}[],
     addedToTeam: 0
   }),
+  async fetch() {
+    try {
+      this.players = await this.$axios.$get('/players')
+    } catch (e) {
+      console.log('Cannot fetch players')
+    }
+  },
   computed: {
     returnFilteredPlayers() {
       return this.players.filter(player => player.active)
     }
   },
   mounted() {
-    // this.onGenerateTeam()
     if(localStorage.getItem('teamOne')) {
       this.teamOne = JSON.parse(localStorage.getItem('teamOne') as string)
     }
@@ -226,6 +218,16 @@ export default Vue.extend({
       localStorage.setItem('teamOne', JSON.stringify(this.teamOne))
       localStorage.setItem('teamTwo', JSON.stringify(this.teamTwo))
       localStorage.setItem('teamThree', JSON.stringify(this.teamThree))
+    },
+    async onSetPlayerActiveState(player: PlayerInterface) {
+      try {
+        const response = await this.$axios.$patch(`/players/${player.id}`, {
+          active: !player.active,
+        })
+        player.active = response.active
+      } catch (e) {
+        console.log('Cannot update player status')
+      }
     }
   }
 })
