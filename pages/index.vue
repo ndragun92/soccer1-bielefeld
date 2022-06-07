@@ -152,7 +152,7 @@ export default Vue.extend({
     teamThree: [] as {id: number, name: string, active: boolean, won: number, lost: number}[],
     addedToTeam: 0
   }),
-  async fetch() {
+  async created() {
     try {
       this.players = await this.$axios.$get('/players')
     } catch (e) {
