@@ -1,5 +1,6 @@
 <template>
   <div class="bg-[#00a000] min-h-screen">
+    <!--ver: 1-->
     <el-field :team-one="teamOne" :team-two="teamTwo" :team-three="teamThree" />
     <div class="text-center">
       <button
