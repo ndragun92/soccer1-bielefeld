@@ -152,13 +152,6 @@ export default Vue.extend({
     teamThree: [] as {id: number, name: string, active: boolean, won: number, lost: number}[],
     addedToTeam: 0
   }),
-  async created() {
-    try {
-      this.players = await this.$axios.$get('/players')
-    } catch (e) {
-      console.log('Cannot fetch players')
-    }
-  },
   head() {
     return {
       title: project.name,
@@ -167,6 +160,13 @@ export default Vue.extend({
   computed: {
     returnFilteredPlayers() {
       return this.players.filter(player => player.active)
+    }
+  },
+  async created() {
+    try {
+      this.players = await this.$axios.$get('/players')
+    } catch (e) {
+      console.log('Cannot fetch players')
     }
   },
   mounted() {
