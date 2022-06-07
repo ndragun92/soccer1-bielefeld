@@ -60,6 +60,11 @@ export default Vue.extend({
     teamThree: [] as {id: number, name: string, active: boolean, won: number, lost: number}[],
     addedToTeam: 0
   }),
+  computed: {
+    returnFilteredPlayers() {
+      return this.players.filter(player => player.active)
+    }
+  },
   methods: {
     randomIntFromInterval(min: number, max: number) { // min and max included
       return Math.floor(Math.random() * (max - min + 1) + min)
@@ -68,10 +73,10 @@ export default Vue.extend({
       this.teamOne = []
       this.teamTwo = []
       this.teamThree = []
-      shuffle(this.players.filter(player => player.active)).forEach(player => {
+      shuffle(this.returnFilteredPlayers).forEach(player => {
         const minTeams = 1
         let maxTeams = 2
-        if(this.players.length >= 15) {
+        if(this.returnFilteredPlayers.length >= 15) {
           maxTeams = 3
         }
         if(!this.addedToTeam) {

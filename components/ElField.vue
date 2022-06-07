@@ -127,12 +127,12 @@
                   alt=""
                 />
                 <div
-                  class="absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
+                  class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
                   style="font-size: 7px"
                   v-text="topTeamPlayer.won"
                 />
                 <div
-                  class="absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
+                  class="hidden absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
                   style="font-size: 7px"
                   v-text="topTeamPlayer.lost"
                 />
@@ -154,12 +154,12 @@
                   alt=""
                 />
                 <div
-                  class="absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
+                  class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
                   style="font-size: 7px"
                   v-text="topTeamPlayer.won"
                 />
                 <div
-                  class="absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
+                  class="hidden absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
                   style="font-size: 7px"
                   v-text="topTeamPlayer.lost"
                 />
@@ -181,12 +181,12 @@
                   alt=""
                 />
                 <div
-                  class="absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
+                  class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
                   style="font-size: 7px"
                   v-text="topTeamPlayer.won"
                 />
                 <div
-                  class="absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
+                  class="hidden absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
                   style="font-size: 7px"
                   v-text="topTeamPlayer.lost"
                 />
@@ -208,12 +208,12 @@
                   alt=""
                 />
                 <div
-                  class="absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
+                  class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
                   style="font-size: 7px"
                   v-text="topTeamPlayer.won"
                 />
                 <div
-                  class="absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
+                  class="hidden absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
                   style="font-size: 7px"
                   v-text="topTeamPlayer.lost"
                 />
@@ -235,12 +235,12 @@
                   alt=""
                 />
                 <div
-                  class="absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
+                  class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
                   style="font-size: 7px"
                   v-text="topTeamPlayer.won"
                 />
                 <div
-                  class="absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
+                  class="hidden absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
                   style="font-size: 7px"
                   v-text="topTeamPlayer.lost"
                 />
@@ -283,12 +283,12 @@
                   alt=""
                 />
                 <div
-                  class="absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
+                  class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
                   style="font-size: 7px"
                   v-text="bottomTeamPlayer.won"
                 />
                 <div
-                  class="absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
+                  class="hidden absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
                   style="font-size: 7px"
                   v-text="bottomTeamPlayer.lost"
                 />
@@ -310,12 +310,12 @@
                   alt=""
                 />
                 <div
-                  class="absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
+                  class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
                   style="font-size: 7px"
                   v-text="bottomTeamPlayer.won"
                 />
                 <div
-                  class="absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
+                  class="hidden absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
                   style="font-size: 7px"
                   v-text="bottomTeamPlayer.lost"
                 />
@@ -337,12 +337,12 @@
                   alt=""
                 />
                 <div
-                  class="absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
+                  class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
                   style="font-size: 7px"
                   v-text="bottomTeamPlayer.won"
                 />
                 <div
-                  class="absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
+                  class="hidden absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
                   style="font-size: 7px"
                   v-text="bottomTeamPlayer.lost"
                 />
@@ -364,12 +364,12 @@
                   alt=""
                 />
                 <div
-                  class="absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
+                  class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
                   style="font-size: 7px"
                   v-text="bottomTeamPlayer.won"
                 />
                 <div
-                  class="absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
+                  class="hidden absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
                   style="font-size: 7px"
                   v-text="bottomTeamPlayer.lost"
                 />
@@ -391,12 +391,12 @@
                   alt=""
                 />
                 <div
-                  class="absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
+                  class="hidden absolute bottom-0 left-0 bg-green-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tr"
                   style="font-size: 7px"
                   v-text="bottomTeamPlayer.won"
                 />
                 <div
-                  class="absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
+                  class="hidden absolute bottom-0 right-0 bg-red-600 py-0.5 px-1 opacity-75 hover:opacity-100 rounded-tl"
                   style="font-size: 7px"
                   v-text="bottomTeamPlayer.lost"
                 />
