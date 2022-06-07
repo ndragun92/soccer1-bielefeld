@@ -133,9 +133,10 @@ export default {
       description: project.description,
       lang: project.lang,
       theme_color: project.themeColor,
+      icon: project.pwaIcon,
       icons: [
         {
-          src: `pwaIcon.png`,
+          src: project.pwaIcon,
           size: '144x144',
           type: 'image/png',
         },
