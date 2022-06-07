@@ -1,13 +1,9 @@
 import { project } from './config/project'
 
 // Env vars
-const apiUrl = process.env.apiUrl || 'https://soccer1-bielefeld.herokuapp.com'
 export default {
   router: {
     base: '/soccer1-bielefeld/',
-  },
-  env: {
-    apiUrl,
   },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -118,7 +114,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: apiUrl,
+    baseURL: 'https://soccer1-bielefeld.herokuapp.com',
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
