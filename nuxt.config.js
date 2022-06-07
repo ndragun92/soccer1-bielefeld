@@ -1,7 +1,7 @@
 import { project } from './config/project'
 
 // Env vars
-const apiUrl = process.env.apiUrl || 'http://localhost:3333'
+const apiUrl = process.env.apiUrl || 'https://soccer1-bielefeld.herokuapp.com'
 export default {
   router: {
     base: '/soccer1-bielefeld/',
