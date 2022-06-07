@@ -56,6 +56,9 @@ export default {
     jit: true,
     // add '~tailwind.config` alias
     exposeConfig: true,
+    plugins: [
+      require('@tailwindcss/forms')
+    ]
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

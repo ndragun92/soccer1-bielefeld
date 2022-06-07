@@ -1,26 +1,32 @@
 <template>
   <div class="bg-[#00a000] min-h-screen">
-    <el-field />
-    <div>
-      <button type="button" @click="onGenerateTeam()">Generate team</button>
+    <el-field :team-one="teamOne" :team-two="teamTwo" :team-three="teamThree" />
+    <div class="text-center">
+      <button
+              type="button"
+              class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              @click="onGenerateTeam()">Generiraj timove</button>
     </div>
-    <div class="text-center my-2">
+    <div class="mt-4 text-center my-2 bg-black pt-6">
       <img class="w-20 m-auto" src="/images/soccer1-logo.png" alt="">
-      <p class="mt-2 text-sm text-white">
+      <p class="mt-4 text-sm text-white">
         Schelpmilser Weg 11, 33609 Bielefeld
       </p>
-      <hr>
-      <pre>{{teamOne.length}}</pre>
-      <hr>
-      <pre>{{teamTwo.length}}</pre>
-      <hr>
-      <pre>{{teamThree.length}}</pre>
-      <hr>
-      <pre>{{teamOne}}</pre>
-      <hr>
-      <pre>{{teamTwo}}</pre>
-      <hr>
-      <pre>{{teamThree}}</pre>
+      <div class="mt-6">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9816.753055597379!2d8.6039907!3d52.039884!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xacfbe39223df076a!2sSoccer%201!5e0!3m2!1sen!2sde!4v1654606055530!5m2!1sen!2sde" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+<!--      <hr>-->
+<!--      <pre>{{teamOne.length}}</pre>-->
+<!--      <hr>-->
+<!--      <pre>{{teamTwo.length}}</pre>-->
+<!--      <hr>-->
+<!--      <pre>{{teamThree.length}}</pre>-->
+<!--      <hr>-->
+<!--      <pre>{{teamOne}}</pre>-->
+<!--      <hr>-->
+<!--      <pre>{{teamTwo}}</pre>-->
+<!--      <hr>-->
+<!--      <pre>{{teamThree}}</pre>-->
     </div>
   </div>
 </template>
@@ -33,22 +39,21 @@ export default Vue.extend({
   name: 'IndexPage',
   data: () => ({
     players: [
-      {id: 1, name: 'Player 1', active: true, won: 0, lost: 0},
-      {id: 2, name: 'Player 2', active: true, won: 0, lost: 0},
-      {id: 3, name: 'Player 3', active: true, won: 0, lost: 0},
-      {id: 4, name: 'Player 4', active: true, won: 0, lost: 0},
-      {id: 5, name: 'Player 5', active: true, won: 0, lost: 0},
-      {id: 6, name: 'Player 6', active: true, won: 0, lost: 0},
-      {id: 7, name: 'Player 7', active: true, won: 0, lost: 0},
-      {id: 8, name: 'Player 8', active: true, won: 0, lost: 0},
-      {id: 9, name: 'Player 9', active: true, won: 0, lost: 0},
-      {id: 10, name: 'Player 10', active: true, won: 0, lost: 0},
-      {id: 11, name: 'Player 11', active: true, won: 0, lost: 0},
-      {id: 12, name: 'Player 12', active: true, won: 0, lost: 0},
-      {id: 13, name: 'Player 13', active: true, won: 0, lost: 0},
-      // {id: 14, name: 'Player 14', active: true, won: 0, lost: 0},
-      // {id: 15, name: 'Player 15', active: true, won: 0, lost: 0},
-      // {id: 16, name: 'Player 16', active: true, won: 0, lost: 0},
+      {id: 1, name: 'Mario', active: true, won: 0, lost: 0},
+      {id: 2, name: 'Misko', active: true, won: 0, lost: 0},
+      {id: 3, name: 'Dusko', active: true, won: 0, lost: 0},
+      {id: 4, name: 'Nemanja', active: true, won: 0, lost: 0},
+      {id: 5, name: 'Andrej', active: true, won: 0, lost: 0},
+      {id: 6, name: 'Beco', active: true, won: 0, lost: 0},
+      {id: 7, name: 'Niđo', active: true, won: 0, lost: 0},
+      {id: 8, name: 'Kico', active: true, won: 0, lost: 0},
+      {id: 9, name: 'Martin', active: true, won: 0, lost: 0},
+      {id: 10, name: 'Teo', active: true, won: 0, lost: 0},
+      {id: 11, name: 'Nikola R.', active: true, won: 0, lost: 0},
+      {id: 12, name: 'Nikola V.', active: true, won: 0, lost: 0},
+      {id: 13, name: 'Jozo', active: true, won: 0, lost: 0},
+      {id: 14, name: 'Davor', active: true, won: 0, lost: 0},
+      {id: 15, name: 'Danco', active: false, won: 0, lost: 0},
     ],
     teamOne: [] as {id: number, name: string, active: boolean, won: number, lost: number}[],
     teamTwo: [] as {id: number, name: string, active: boolean, won: number, lost: number}[],
@@ -63,7 +68,7 @@ export default Vue.extend({
       this.teamOne = []
       this.teamTwo = []
       this.teamThree = []
-      shuffle(this.players).forEach(player => {
+      shuffle(this.players.filter(player => player.active)).forEach(player => {
         const minTeams = 1
         let maxTeams = 2
         if(this.players.length >= 15) {
