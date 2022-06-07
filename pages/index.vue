@@ -123,6 +123,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import shuffle from 'lodash/shuffle'
+import {project} from "~/config/project";
 
 interface PlayerInterface { id: number, name: string, active: boolean, won: number, lost: number }
 
@@ -141,6 +142,11 @@ export default Vue.extend({
       this.players = await this.$axios.$get('/players')
     } catch (e) {
       console.log('Cannot fetch players')
+    }
+  },
+  head() {
+    return {
+      title: project.name,
     }
   },
   computed: {
