@@ -133,54 +133,9 @@ export default {
       description: project.description,
       lang: project.lang,
       theme_color: project.themeColor,
-      // icon: project.pwaIcon,
-      // icons: [
-      //   {
-      //     src: project.pwaIcon,
-      //     size: '64x64',
-      //     type: 'image/png',
-      //     // purpose: 'any maskable',
-      //   },
-      //   {
-      //     src: project.pwaIcon,
-      //     size: '120x120',
-      //     type: 'image/png',
-      //     // purpose: 'any maskable',
-      //   },
-      //   {
-      //     src: project.pwaIcon,
-      //     size: '144x144',
-      //     type: 'image/png',
-      //     // purpose: 'any maskable',
-      //   },
-      //   {
-      //     src: project.pwaIcon,
-      //     size: '152x152',
-      //     type: 'image/png',
-      //     // purpose: 'any maskable',
-      //   },
-      //   {
-      //     src: project.pwaIcon,
-      //     size: '192x192',
-      //     type: 'image/png',
-      //     // purpose: 'any maskable',
-      //   },
-      //   {
-      //     src: project.pwaIcon,
-      //     size: '384x384',
-      //     type: 'image/png',
-      //     // purpose: 'any maskable',
-      //   },
-      //   {
-      //     src: project.pwaIcon,
-      //     size: '512x512',
-      //     type: 'image/png',
-      //     // purpose: 'any maskable',
-      //   },
-      // ],
     },
     icon: {
-      fileName: 'pwaIcon.png',
+      fileName: project.pwaIcon,
     },
   },
 
